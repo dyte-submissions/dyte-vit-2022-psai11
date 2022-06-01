@@ -26,7 +26,7 @@
 [![Issues](https://img.shields.io/github/issues/dyte-submissions/dyte-vit-2022-psai11?style=for-the-badge&label=Issues)](https://github.com/dyte-submissions/dyte-vit-2022-psai11)
 <!-- [![Issues][issues-shield]][issues-url] -->
 <!-- [![MIT License](https://img.shields.io/github/issues/dyte-submissions/dyte-vit-2022-psai11?style=for-the-badge&label=Issues)][https://github.com/dyte-submissions/dyte-vit-2022-psai11/blob/master/LICENSE.txt] -->
-<!-- [![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/psai-67b54b1a2/] -->
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/psai-67b54b1a2/)
 
 
 

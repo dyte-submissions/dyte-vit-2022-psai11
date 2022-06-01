@@ -28,25 +28,24 @@
 
 
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Depen-Tool</h3>
 
   <p align="center">
-    project_description
+    A CLI Tool to check & update dependency versions in Github Repositories
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/dyte-submissions/dyte-vit-2022-psai11"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/dyte-submissions/dyte-vit-2022-psai11">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/dyte-submissions/dyte-vit-2022-psai11/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/dyte-submissions/dyte-vit-2022-psai11/issues">Request Feature</a>
   </p>
 </div>
 
@@ -74,7 +73,7 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+<!--     <li><a href="#acknowledgments">Acknowledgments</a></li> -->
   </ol>
 </details>
 
@@ -83,9 +82,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+This is a CLI tool for updating dependencies of Github Repositories.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -93,14 +92,16 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
+<!-- * [Next.js](https://nextjs.org/) -->
+<!-- * [React.js](https://reactjs.org/) -->
+<!-- * [Vue.js](https://vuejs.org/) -->
+<!-- * [Angular](https://angular.io/) -->
+<!-- * [Svelte](https://svelte.dev/)
 * [Laravel](https://laravel.com)
 * [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [JQuery](https://jquery.com) -->
+* [Python](https://www.python.org/)
+* [Node.JS](https://nodejs.org/en/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -109,7 +110,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
+This is how you may setup this project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
@@ -119,23 +120,42 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm install npm@latest -g
   ```
+The following are some necessary python libraries to be installed.
+* python
+  ```sh
+  pip install PyGithub
+  ```
+  ```sh
+  pip install pandas
+  ```
+  ```sh
+  pip install argparse
+  ```
+  ```sh
+  pip install json
+  ```
+ * _MAKE SURE THE GITHUB ACCOUNT THAT CONTAINS REPOSITORIES ON WHICH YOU WANT RUN THIS TOOL, IS `ALREADY LOGED INTO YOUR TERMINAL`_
+ * _MAKE SURE YOU CARRY THE `GITHUB ACCESS CODE` TO THE ABOVE MENTIONED GITHUB ACCOUNT_
+  
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Get a Github Access Key at [Github Access Tokens](https://github.com/settings/tokens)
+2. Create a Folder with any random name
+3. Open Terminal in the above mentioned Folder (For easy navigation through output files, that will be genarated later)
+4. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/dyte-submissions/dyte-vit-2022-psai11.git
    ```
-3. Install NPM packages
+5. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
+<!-- 4. Enter your API in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
-
+ -->
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -143,9 +163,38 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Here is a detailed Walkthrough of how one may use this tool.<br>
+* Open the folder that contains your `SDKtool.exe`.
+* Run terminal in this folder.
+* Create a `.csv` file containing github repository links in the following manner. Let it be named `input.csv`.
+![image](https://user-images.githubusercontent.com/61933732/171466662-cd9f33b2-ffcc-412f-9530-18c461f024b6.png)
+* Save the `input.csv` file in the same folder where `SDKtool.exe` exists
+![image](https://user-images.githubusercontent.com/61933732/171467074-0bf290c9-9206-49e3-90cd-d5963ca321ae.png)
+* To check dependencies of github repositories mentioned in `input.csv` with respect to `QueryDependency@RequiredVersion`(for example `axios@0.23.0`) run the following command:
+  ```sh
+  SDKtool.exe input.csv axios@0.23.0
+  ```
+  _OR_
+  ```sh
+  SDKtool.exe input.csv QueryDependency@RequiredVersion
+  ```
+* Running the above command will provide a new `output.csv`
+![image](https://user-images.githubusercontent.com/61933732/171467595-fcf9c294-65db-430a-b41a-ba6ad6481915.png)
+* To update the dependencies of github repositories which where less than `RequiredVersion` run the following command:
+  ```sh
+  SDKtool.exe input.csv axios@0.23.0 --update
+  ```
+  _OR_
+  ```sh
+  SDKtool.exe input.csv QueryDependency@RequiredVersion --update
+  ```
+* Running the above command will update the dependencies and send a Pull Request to the github repository, create an output file named `PROutput.csv`
+![image](https://user-images.githubusercontent.com/61933732/171468974-f4c66cae-8d37-4ad8-ad53-18434282eed4.png)
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+* PR is created in the link given in `PROutput.csv`
+![image](https://user-images.githubusercontent.com/61933732/171470644-2b2bc7ba-ca74-42b1-9907-1ae6f59cfccf.png)
+
+<!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -154,12 +203,16 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [x] Check dependency valid or not
+- [x] Check dependency version valid or not
+- [x] Check deprecation of dependencies
+- [x] Clone repositories from CSV file
+- [x] Check version satisfiability in each repository
+- [x] Create Output File with version & version satisfiability 
+- [x] Update version of un satisfied dependencies
+- [x] Create new Output File with PR links 
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/dyte-submissions/dyte-vit-2022-psai11/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -195,22 +248,22 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Your Name - [@SaiChai91235079](https://twitter.com/SaiChai91235079) - saichaita@gamil.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/dyte-submissions/dyte-vit-2022-psai11](https://github.com/dyte-submissions/dyte-vit-2022-psai11)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+<!-- ## Acknowledgments -->
 
-* []()
-* []()
-* []()
+<!-- * []() -->
+<!-- * []() -->
+<!-- * []() -->
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#top">back to top</a>)</p> -->
 
 
 

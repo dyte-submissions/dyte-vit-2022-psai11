@@ -19,14 +19,18 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 <!-- [![Contributors][contributors-shield]][contributors-url] -->
-[![Forks][forks-shield]][https://github.com/dyte-submissions/dyte-vit-2022-psai11/network]
-[![Stargazers][stars-shield]][https://github.com/dyte-submissions/dyte-vit-2022-psai11/stargazers]
-[![Issues][issues-shield]][https://github.com/dyte-submissions/dyte-vit-2022-psai11/issues]
-[![MIT License][license-shield]][https://github.com/dyte-submissions/dyte-vit-2022-psai11/blob/master/LICENSE.txt]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/psai-67b54b1a2/]
+[![GitHub forks](https://img.shields.io/github/forks/dyte-submissions/dyte-vit-2022-psai11?style=for-the-badge&logo=git)](https://github.com/dyte-submissions/dyte-vit-2022-psai11/network)
+<!-- [![Forks][forks-shield]][forks-url] -->
+[![GitHub stars](https://img.shields.io/github/stars/dyte-submissions/dyte-vit-2022-psai11?style=for-the-badge)](https://github.com/dyte-submissions/dyte-vit-2022-psai11/stargazers)
+<!-- [![Stargazers][stars-shield]][stars-url] -->
+[![Issues](https://img.shields.io/github/issues/dyte-submissions/dyte-vit-2022-psai11?style=for-the-badge&label=Issues)](https://github.com/dyte-submissions/dyte-vit-2022-psai11)
+<!-- [![Issues][issues-shield]][issues-url] -->
+<!-- [![MIT License](https://img.shields.io/github/issues/dyte-submissions/dyte-vit-2022-psai11?style=for-the-badge&label=Issues)][https://github.com/dyte-submissions/dyte-vit-2022-psai11/blob/master/LICENSE.txt] -->
+<!-- [![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/psai-67b54b1a2/] -->
 
 
 
+<!-- dyte-submissions/dyte-vit-2022-psai11 -->
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/github_username/repo_name">

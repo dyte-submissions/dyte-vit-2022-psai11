@@ -147,7 +147,7 @@ if __name__ == "__main__":
             print("(Input) Enter your github access token to send PR to the repositories (You may copy-paste the token):")
             df["PRLink"]=""
             token=input()
-            # g = Github("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")
+            # g = Github("USER TOKEN")
             try:
                 g = Github(token)
                 user = g.get_user()

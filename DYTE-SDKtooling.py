@@ -117,7 +117,8 @@ if __name__ == "__main__":
                 if (not depen_name in depends['dependencies'].keys()):
                     continue
                 proj_version = depends['dependencies'][depen_name]
-                proj_version = proj_version[1:]
+                if proj_version[0]=='~' or proj_version[0]=='^':
+                    proj_version = proj_version[1:]
                 df.loc[row,'version'] = proj_version
                 df.loc[row,'version_satisfied'] = str(proj_version >= req_depen_version)
                 if(not proj_version>=req_depen_version):

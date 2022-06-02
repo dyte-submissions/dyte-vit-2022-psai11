@@ -178,7 +178,7 @@ if __name__ == "__main__":
                 try:
                     pr = repo.create_pull(title=PRtitle, body=PRbody, head=new_branch_name, base=PRbase)
                 except:
-                    print("ERROR: Please close/accept the existing PR, before creating a new one.")
+                    print("ERROR: Make sure the repository is present in the account that is logged into your terminal.\nERROR: Or there might be pre-existing Pull Requests. Confirm/ Close the previous pull requests.")
                     sys.exit()
                 prlink = df.loc[reposList[unsatisfied_repoName[row]], 'RepoLink']+'/pull/'+str(pr.number)
                 prlinks.append(prlink)
